@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  */
 public class Model {
 
-    public static final String Q_WHRE_ID = "WHERE id = ";
+    public static final String Q_WHERE_ID = "WHERE id = ";
 
     public static final String Q_WHERE = "WHERE";
 
