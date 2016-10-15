@@ -54,6 +54,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
+     /**
+     * Regresa un director basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Director} que coincidieron con el criterio
+     * {@code Director} si el criterio es valido.
+     */
     @Override
     public List<Director> getDirectoresByCriteria(String criterio) {
         List<Director> objects = new ArrayList<>();
@@ -72,6 +79,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
         return objects;
     }
+    
+     /**
+     * Genera una inserccion, cambio o elimina en {@code Director}
+     *
+     * @param director para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
 
     @Override
     public void directorProcess(Director director, CRUD crud) {
@@ -107,7 +121,13 @@ public class VideoDaoJDBC implements VideoDao {
         
     }
     
-
+/**
+     * Regresa un Actor basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Actor} si el id es valido.
+     */
     @Override
     public Actor getActorById(Integer id) {
         try {
@@ -125,6 +145,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
+     /**
+     * Regresa un Actor basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Actor} que coincidieron con el criterio
+     * {@code Actor} si el criterio es valido.
+     */
  
     @Override
     public List<Actor> getActoresByCriteria(String criterio) {
@@ -144,7 +171,12 @@ public class VideoDaoJDBC implements VideoDao {
         }
         return objects;
     }
-
+/**
+     * Genera una inserccion, cambio o elimina en {@code Actor}
+     *
+     * @param actor para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
 
     @Override
     public void actorProcces(Actor actor, CRUD crud) {
@@ -176,7 +208,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
-   
+   /**
+     * Regresa un Cinta basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Cinta} si el id es valido.
+     */
     @Override
     public Cinta getCintaById(Integer id) {
         try {
@@ -194,7 +232,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
-    
+     /**
+     * Regresa un Cinta basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Cinta} que coincidieron con el criterio
+     * {@code Cinta} si el criterio es valido.
+     */
     @Override
     public List<Cinta> getCintasByCriteria(String criterio) {
         List<Cinta> objects = new ArrayList<>();
@@ -214,7 +258,12 @@ public class VideoDaoJDBC implements VideoDao {
         return objects;
     }
 
- 
+ /**
+     * Genera una inserccion, cambio o elimina en {@code Cinta}
+     *
+     * @param cinta para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void cintaProcces(Cinta cinta, CRUD crud) {
         try {
@@ -245,7 +294,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
-  
+  /**
+     * Regresa un Ficha basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Ficha} si el id es valido.
+     */
     @Override
     public Ficha getFichaById(Integer id) {
         try {
@@ -263,7 +318,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
- 
+  /**
+     * Regresa una Ficha basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Ficha} que coincidieron con el criterio
+     * {@code Ficha} si el criterio es valido.
+     */
     @Override
     public List<Ficha> getFichasByCriteria(String criterio) {
         List<Ficha> objects = new ArrayList<>();
@@ -283,7 +344,12 @@ public class VideoDaoJDBC implements VideoDao {
         return objects;
     }
 
- 
+ /**
+     * Genera una inserccion, cambio o elimina en {@code Ficha}
+     *
+     * @param ficha para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void fichaProcces(Ficha ficha, CRUD crud) {
         try {
@@ -314,7 +380,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
-
+/**
+     * Regresa un Lista basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Lista} si el id es valido.
+     */
     @Override
     public Lista getListaById(Integer id) {
         try {
@@ -332,7 +404,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
-
+ /**
+     * Regresa una Lista basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Lista} que coincidieron con el criterio
+     * {@code Lista} si el criterio es valido.
+     */
     @Override
     public List<Lista> getListasByCriteria(String criterio) {
         List<Lista> objects = new ArrayList<>();
@@ -352,7 +430,12 @@ public class VideoDaoJDBC implements VideoDao {
         return objects;
     }
 
-
+/**
+     * Genera una inserccion, cambio o elimina en {@code Lista}
+     *
+     * @param lista para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void listaProcces(Lista lista, CRUD crud) {
         try {
@@ -389,7 +472,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
- 
+ /**
+     * Regresa un Pelicula basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Pelicula} si el id es valido.
+     */
     @Override
     public Pelicula getPeliculaById(Integer id) {
         try {
@@ -406,7 +495,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
         return null;
     }
-
+ /**
+     * Regresa un Pelicula basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Pelicula} que coincidieron con el criterio
+     * {@code Pelicula} si el criterio es valido.
+     */
 
     @Override
     public List<Pelicula> getPeliculaByCriteria(String criterio) {
@@ -427,7 +522,12 @@ public class VideoDaoJDBC implements VideoDao {
         return objects;
     }
 
-
+/**
+     * Genera una inserccion, cambio o elimina en {@code Pelicula}
+     *
+     * @param pelicula para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void peliculaProcces(Pelicula pelicula, CRUD crud) {
         try {
@@ -463,6 +563,13 @@ public class VideoDaoJDBC implements VideoDao {
     }
 
 
+    /**
+     * Regresa un Prestamo basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Prestmo} si el id es valido.
+     */
     @Override
     public Prestamo getPrestamoById(Integer id) {
         try {
@@ -479,7 +586,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
         return null;
     }
-
+     /**
+     * Regresa un Prestamo basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Prestamo} que coincidieron con el criterio
+     * {@code Prestamo} si el criterio es valido.
+     */
 
     @Override
     public List<Prestamo> getPrestamosByCriteria(String criterio) {
@@ -500,7 +613,12 @@ public class VideoDaoJDBC implements VideoDao {
         return objects;
     }
 
-   
+   /**
+     * Genera una inserccion, cambio o elimina en {@code Prestamo}
+     *
+     * @param prestamo para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void prestamoProcces(Prestamo prestamo, CRUD crud) {
         try {
@@ -535,7 +653,13 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
-  
+  /**
+     * Regresa un Socio basado en un id del registro de la base de datos.
+     *
+     * @param id entero que identifica la entidad.
+     * @return null si el id no se encuentra en la base de datos ó un
+     * {@code Socio} si el id es valido.
+     */
     @Override
     public Socio getSocioById(Integer id) {
         try {
@@ -553,7 +677,13 @@ public class VideoDaoJDBC implements VideoDao {
         return null;
     }
 
-  
+   /**
+     * Regresa un Socio basado en un criterio/campo del registro de la base de datos.
+     *
+     * @param string que identifica la entidad.
+     * @return {@code List} de {@code Socio} que coincidieron con el criterio
+     * {@code Socio} si el criterio es valido.
+     */
     @Override
     public List<Socio> getSociosByCriteria(String criterio) {
         List<Socio> objects = new ArrayList<>();
@@ -572,7 +702,12 @@ public class VideoDaoJDBC implements VideoDao {
         }
         return objects;
     }
-
+/**
+     * Genera una inserccion, cambio o elimina en {@code Socio}
+     *
+     * @param socio para donde se va realizar la operacion
+     * @param crud {@code CRUD} segun la operacion a realizar
+     */
     @Override
     public void socioProcces(Socio socio, CRUD crud) {
         try {
@@ -605,41 +740,6 @@ public class VideoDaoJDBC implements VideoDao {
         }
     }
 
-	@Override
-	public Pelicula getPeliculaById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void peliculaProcces(Pelicula pelicula, CRUD crud) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Prestamo getPrestamoById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void prestamoProcces(Prestamo prestamo, CRUD crud) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Socio getSocioById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void socioProcces(Socio socio, CRUD crud) {
-		// TODO Auto-generated method stub
-		
-	}
-    
+	
 
 }
